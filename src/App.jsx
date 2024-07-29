@@ -1,11 +1,8 @@
-import { Button, Container, Form, Input, InputLabel, Title, TopBackground } from "./styles"
-
-import UsersImgage from './assets/users.png'
+import { Button, Container, Form, Input, InputLabel, Title, TopBackground, ContainerInputs } from './styles'; // ajuste o caminho conforme necessário
+import UsersImgage from './assets/users.png';
 
 function Home() {
-
   return (
-
     <Container>
       <TopBackground>
         <img src={UsersImgage} alt="imagem-usuarios" />
@@ -35,9 +32,7 @@ function Home() {
         <Button>Cadastrar Usuário</Button>
       </Form>
     </Container>
-
-
-  )
+  );
 }
 
-export default Home
+export default Home;
