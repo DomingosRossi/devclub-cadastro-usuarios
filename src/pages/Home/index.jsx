@@ -1,5 +1,5 @@
 import { Button, Container, Form, Input, InputLabel, Title, TopBackground, ContainerInputs } from './styles'; // ajuste o caminho conforme necessário
-import UsersImgage from './assets/users.png';
+import UsersImgage from '../../assets/users.png';
 
 function Home() {
   return (
@@ -12,23 +12,23 @@ function Home() {
         <Title>Cadastrar Usuário</Title>
 
         <ContainerInputs>
-          <div>
             <div>
-              <InputLabel>Nome<span>*</span></InputLabel>
+              <InputLabel>Nome<span> *</span></InputLabel>
               <Input type='text' placeholder="Nome do usuário" />
             </div>
 
             <div>
-              <InputLabel>Idade<span>*</span></InputLabel>
+              <InputLabel>Idade<span> *</span></InputLabel>
               <Input type="number" placeholder="Idade do usuário" />
             </div>
-          </div>
+          
+          </ContainerInputs>
 
-          <div>
-            <InputLabel>E-mail<span>*</span></InputLabel>
+          <div style={{ width: '100%'}}>
+            <InputLabel>E-mail<span> *</span></InputLabel>
             <Input type="email" placeholder="E-mail do usuário" />
           </div>
-        </ContainerInputs>
+        
         <Button>Cadastrar Usuário</Button>
       </Form>
     </Container>
