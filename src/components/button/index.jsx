@@ -1,9 +1,10 @@
-import { MyButton} from './styles'
+import { Button } from './styles'
 
-function DefaultButton(){
+function DefaultButton({ children, ...props }){
+//...props variavel criada para guardar o restante de children
 
     return(
-        <Button>ok ok</Button>
+        <Button {...props}>{children}</Button>
     )
 }
 

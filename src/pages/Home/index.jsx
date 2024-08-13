@@ -1,9 +1,10 @@
 import { useRef } from 'react';
 import api from '../../services/api';
 
-import { Container, Form, Input, InputLabel, Title, TopBackground, ContainerInputs } from './styles'; // ajuste o caminho conforme necessário
-import UsersImgage from '../../assets/users.png';
+import { Container, Form, Input, InputLabel, Title, ContainerInputs } from './styles'; // ajuste o caminho conforme necessário
+
 import Button  from '../../components/button';
+import TopBackground from '../../components/TopBackGround';
 
 function Home() {
   const inputName = useRef()
@@ -23,9 +24,7 @@ function Home() {
 
   return (
     <Container>
-      <TopBackground>
-        <img src={UsersImgage} alt="imagem-usuarios" />
-      </TopBackground>
+      <TopBackground />
 
       <Form>
         <Title>Cadastrar Usuário</Title>
