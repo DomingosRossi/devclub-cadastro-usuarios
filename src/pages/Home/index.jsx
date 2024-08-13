@@ -1,8 +1,9 @@
 import { useRef } from 'react';
 import api from '../../services/api';
 
-import { Button, Container, Form, Input, InputLabel, Title, TopBackground, ContainerInputs } from './styles'; // ajuste o caminho conforme necessário
+import { Container, Form, Input, InputLabel, Title, TopBackground, ContainerInputs } from './styles'; // ajuste o caminho conforme necessário
 import UsersImgage from '../../assets/users.png';
+import Button  from '../../components/button';
 
 function Home() {
   const inputName = useRef()
