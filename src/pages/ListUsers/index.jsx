@@ -3,8 +3,13 @@ import api from '../../services/api'
 
 import Button from '../../components/button'
 import TopBackground from '../../components/TopBackGround'
+import { Container, Title } from '../Home/styles'
+import { AvatarUser, CardUsers, ContainerUsers, TrashIcon } from './styles'
+import Trash from '../../assets/trash.svg'
+import { useNavigate } from 'react-router-dom'
 
 function ListUsers() {
+    
 
     const [users, setUsers] = useState([])
 
@@ -19,23 +24,28 @@ function ListUsers() {
 
 
     return (
-        <div>
+        <Container>
             <TopBackground />
-            <h1>Listagem de Usuários</h1>
+            <Title>Lista de Usuários</Title>
 
-            {users.map(user => (
+            <ContainerUsers >
+                {users.map(user => (
+                    <CardUsers key={user.id}>
+                        <AvatarUser src={`https://avatar.iran.liara.run/public/?username=${user.id}`} />
+                    <div>
+                        <h3>{user.name}</h3>
+                        <p>{user.email}</p>
+                        <p>{user.age}</p>
+                    </div>
+                    <TrashIcon src={Trash} alt='icone-lixo'/>
+                    </CardUsers>
 
-                <div>
-                    <p>{user.name}</p>
-                    <p>{user.email}</p>
-                    <p>{user.age}</p>
-                </div>
+                ))}
 
-            ))}
+            </ContainerUsers>
 
-
-            <Button>Voltar</Button>
-        </div>
+            <Button type="button">Voltar</Button>
+        </Container>
     )
 }
 
