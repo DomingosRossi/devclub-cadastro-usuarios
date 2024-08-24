@@ -24,8 +24,12 @@ function ListUsers() {
     }, [])
 
     async function deleteUsers(id) {
-        await api.delete('/usuarios/${id}')
-    }
+        await api.delete(`/usuarios/${id}`)
+
+        const updateUsers = users.filter(user => user.id !== id);
+
+        setUsers(updateUsers);
+    };
 
 
     return (
